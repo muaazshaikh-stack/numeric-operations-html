@@ -1,0 +1,151 @@
+<!-- Shapes operation  Start-->
+<<<<<<< HEAD
+<div id="ShapesOperation" class="operation-item shapes-operation">
+=======
+<div id="ShapesOperation(shape)" class="operation-item shapes-operation">
+>>>>>>> square-shape-component
+  <div class="operation-item-container">
+    <!-- Add input fields, buttons, and functionality as needed -->
+
+    <!-- Tab container with three tabs -->
+    <div class="tab-container">
+<<<<<<< HEAD
+      <div class="tab" data-tab="tab1">Square</div>
+      <div class="tab" data-tab="tab2">Rectangle</div>
+      <div class="tab" data-tab="tab3">Circle</div>
+    </div>
+
+    <router-outlet id="shape-router-outlet"></router-outlet>
+
+    <!-- Tab content for Square -->
+    <div id="tab1" class="tab-content">
+      <div class="flex-row row-h-align-center">
+        <span class="margin-right-10px side-lenght-label"
+          >Enter Side Length:</span
+        >
+        <input
+          type="text"
+          class="textbox required"
+          id="square-side-input"
+          placeholder="Enter Side Length"
+        />
+      </div>
+      <div class="margin-top-10px">
+        <!-- Separate buttons for Area and Perimeter -->
+        <button
+          disabled
+          id="square-area-btn"
+          class="operation-button"
+          onclick="SquareArea()"
+        >
+          Calculate Area
+        </button>
+
+        <button
+          disabled
+          id="square-perimeter-btn"
+          class="operation-button"
+          onclick="SquarePerimeter()"
+        >
+          Find Perimeter
+        </button>
+      </div>
+      <div>
+        <p id="square-area-result" class="result-text"></p>
+        <p id="square-perimeter-result" class="result-text"></p>
+      </div>
+    </div>
+
+    <!-- Tab content for Rectangle -->
+    <div id="tab2" class="tab-content">
+      <div class="flex-row row-h-align-center">
+        <span class="margin-right-10px side-lenght-label">Enter Length:</span>
+        <input
+          type="text"
+          class="textbox required"
+          id="rectangle-length-input"
+          placeholder="Enter Length"
+        />
+      </div>
+      <div class="flex-row margin-top-10px">
+        <span class="margin-right-10px side-lenght-label">Enter Width:</span>
+        <input
+          type="text"
+          class="textbox required"
+          id="rectangle-width-input"
+          placeholder="Enter Width"
+        />
+      </div>
+      <div class="margin-top-10px">
+        <!-- Separate buttons for Area and Perimeter -->
+        <button
+          disabled
+          id="rectangle-area-btn"
+          class="operation-button"
+          onclick="RectangleArea()"
+        >
+          Calculate Area
+        </button>
+
+        <button
+          disabled
+          id="rectangle-perimeter-btn"
+          class="operation-button"
+          onclick="RectanglePerimeter()"
+        >
+          Find Perimeter
+        </button>
+      </div>
+      <div>
+        <p id="rectangle-area-result" class="result-text"></p>
+        <p id="rectangle-perimeter-result" class="result-text"></p>
+      </div>
+    </div>
+
+    <!-- Tab content for Circle -->
+
+    <div id="tab3" class="tab-content">
+      <div class="flex-row row-h-align-center">
+        <span class="margin-right-10px side-lenght-label">Enter Radius:</span>
+        <input
+          type="text"
+          class="textbox required"
+          id="circle-radius-input"
+          placeholder="Enter Radius"
+        />
+      </div>
+      <div class="margin-top-10px">
+        <!-- Separate buttons for Area and Circumference -->
+        <button
+          disabled
+          id="circle-area-btn"
+          class="operation-button"
+          onclick="calculateCircleArea()"
+        >
+          Calculate Area
+        </button>
+
+        <button
+          disabled
+          id="circle-circumference-btn"
+          class="operation-button"
+          onclick="calculateCircleCircumference()"
+        >
+          Find Circumference
+        </button>
+      </div>
+      <div>
+        <p id="circle-area-result" class="result-text"></p>
+        <p id="circle-circumference-result" class="result-text"></p>
+      </div>
+    </div>
+=======
+      <div class="tab" data-tab="tab1" onclick="onSquareTabClick()">Square</div>
+      <div class="tab" data-tab="tab2" onclick="onRectangleClick()">Rectangle</div>
+      <div class="tab" data-tab="tab3" onclick="onCircleClick()">Circle</div>
+    </div>
+
+    <router-outlet id="shape-router-outlet"></router-outlet>
+>>>>>>> square-shape-component
+  </div>
+</div>

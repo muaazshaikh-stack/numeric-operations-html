@@ -1,0 +1,46 @@
+/* Container for the tabs (Flexbox used to align tabs horizontally) */
+.tab-container {
+  display: flex; /* Align tabs horizontally */
+  cursor: pointer; /* Change cursor to pointer for better user experience */
+  margin-top: 10px; /* Add space between tab and content */
+}
+
+/* Style for each individual tab */
+.tab {
+  padding: 10px 20px; /* Add space inside the tab */
+  color: #0b3764;
+  background-color: #f1f1f1; /* Light gray background */
+  margin-right: 0px; /* Small gap between each tab */
+}
+
+.tab:not(:last-child) {
+  border-width: 1px 0 1px 1px;
+  border-color: #0b3764;
+  border-style: solid;
+}
+
+.tab:last-child {
+  border: 1px solid #0b3764;
+}
+
+/* Style for the active tab (the selected one) */
+.tab.active {
+  background-color: #0b3764;
+  color: #fff;
+}
+
+/* Style for the content of each tab (hidden by default) */
+.tab-content {
+  padding-top: 10px;
+}
+
+/* Display content when the tab is active */
+.tab-content.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for Shapes Operation Container */
+.operation-item.hidden {
+  display: none;
+}

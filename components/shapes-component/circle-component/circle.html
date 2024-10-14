@@ -1,0 +1,20 @@
+<!-- components/shapes-component/circle-component/circle.html -->
+<div id="tab3" class="tab-content">
+    <div class="flex-row row-h-align-center">
+        <span class="margin-right-10px side-lenght-label">Enter Radius:</span>
+        <input type="text" class="textbox required" id="circle-radius-input" placeholder="Enter Radius" />
+    </div>
+    <div class="margin-top-10px">
+        <button disabled id="circle-area-btn" class="operation-button" onclick="calculateCircleArea()">
+            Calculate Area
+        </button>
+        <button disabled id="circle-circumference-btn" class="operation-button"
+            onclick="calculateCircleCircumference()">
+            Find Circumference
+        </button>
+    </div>
+    <div>
+        <p id="circle-area-result" class="result-text"></p>
+        <p id="circle-circumference-result" class="result-text"></p>
+    </div>
+</div>

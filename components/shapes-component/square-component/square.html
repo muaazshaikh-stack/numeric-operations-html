@@ -1,0 +1,19 @@
+<!-- components/shapes-component/square-component/square.html -->
+<div id="tab1" class="tab-content">
+    <div class="flex-row row-h-align-center">
+        <span class="margin-right-10px side-lenght-label">Enter Side Length:</span>
+        <input type="text" class="textbox required" id="square-side-input" placeholder="Enter Side Length" />
+    </div>
+    <div class="margin-top-10px">
+        <button disabled id="square-area-btn" class="operation-button" onclick="SquareArea()">
+            Calculate Area
+        </button>
+        <button disabled id="square-perimeter-btn" class="operation-button" onclick="SquarePerimeter()">
+            Find Perimeter
+        </button>
+    </div>
+    <div>
+        <p id="square-area-result" class="result-text"></p>
+        <p id="square-perimeter-result" class="result-text"></p>
+    </div>
+</div>

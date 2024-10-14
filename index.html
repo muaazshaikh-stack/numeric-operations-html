@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/dialog-box.js"></script>
+  <script src="scripts/tab-container.js"></script>
+
+  <!-- Local stylesheets -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/button.css" />
+  <link rel="stylesheet" href="styles/body-container.css" />
+  <link rel="stylesheet" href="styles/ddl-nav.css" />
+  <link rel="stylesheet" href="styles/top-nav.css" />
+  <link rel="stylesheet" href="styles/side-nav.css" />
+  <link rel="stylesheet" href="styles/operation.css" />
+  <link rel="stylesheet" href="styles/dialog-box.css" />
+  <link rel="stylesheet" href="styles/tab-container.css" />
+  <link rel="stylesheet" href="styles/square.css" />
+  <link rel="stylesheet" href="styles/digital-clock.css" />
+
+  <!-- 3rd party style sheets -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- Side navigation starts -->
+    <div class="side-nav-container" id="side-nav-container">
+      <div class="user-logo-container" id="user-logo-container">
+        <div class="user-image"></div>
+      </div>
+      <div class="operations-header" id="operations-header">Operations</div>
+
+      <div class="nav-items-list" id="nav-items-list">
+        <ul>
+          <li>
+            <div
+              id="sideNavItemPrimeNumber"
+              class="flex-row nav-list-item-container"
+              data-operation="PrimeNumber"
+            >
+              <div
+                class="flex-row row-v-align-center row-h-align-center nav-list-item"
+              >
+                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                <a id="prime-number-link">Find Prime Number</a>
+              </div>
+              <div class="nav-list-item-selection v-hidden">
+                <div class="triangle-left"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="sideNavItemFactorial"
+              class="flex-row nav-list-item-container"
+              data-operation="Factorial"
+            >
+              <div
+                class="flex-row row-v-align-center row-h-align-center nav-list-item"
+              >
+                <i class="fa-solid fa-calculator"></i>
+                <a id="factorial-link">Calculate Factorial</a>
+              </div>
+              <div class="nav-list-item-selection v-hidden">
+                <div class="triangle-left"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              id="sideNavItemSquareRoot"
+              class="flex-row nav-list-item-container"
+              data-operation="SquareRoot"
+            >
+              <div
+                class="flex-row row-v-align-center row-h-align-center nav-list-item"
+              >
+                <i class="fa-solid fa-square-root-variable"></i>
+                <a id="sqrt-link">Find Square Root</a>
+              </div>
+              <div class="nav-list-item-selection v-hidden">
+                <div class="triangle-left"></div>
+              </div>
+            </div>
+          </li>
+          <!-- Add Shapes to the Side Nav -->
+          <li>
+            <div
+              id="sideNavItemShapes"
+              class="flex-row nav-list-item-container"
+              data-operation="Shapes"
+            >
+              <div
+                class="flex-row row-v-align-center row-h-align-center nav-list-item"
+              >
+                <i class="fa-solid fa-shapes"></i>
+                <a id="shapes-link">Shapes</a>
+              </div>
+              <div class="nav-list-item-selection v-hidden">
+                <div class="triangle-left"></div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div
+              id="sideNavItemStopwatch"
+              class="flex-row nav-list-item-container"
+              data-operation="Stopwatch"
+            >
+              <div
+                class="flex-row row-v-align-center row-h-align-center nav-list-item"
+              >
+                <i class="fa-solid fa-stopwatch"></i>
+                <a id="stopwatch-link">Stopwatch</a>
+              </div>
+              <div class="nav-list-item-selection v-hidden">
+                <div class="triangle-left"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Side navigation ends -->
+
+    <!-- Body starts -->
+    <div class="body-container">
+      <!--  Top navigation starts -->
+      <div class="top-nav-container">
+        <div class="burger-button" onclick="toggleSideNav()">
+          <i
+            class="fa-sharp fa-solid fa-greater-than hidden"
+            style="font-size: 18px"
+          ></i>
+          <i class="fa-sharp fa-solid fa-less-than" style="font-size: 18px"></i>
+        </div>
+        <div class="top-nav-items-container">
+          <a id="topNavItemPrimeNumber" data-operation="PrimeNumber"
+            >Find Prime Number</a
+          >
+          <a id="topNavItemFactorial" data-operation="Factorial"
+            >Calculate Factorial</a
+          >
+          <a id="topNavItemSquareRoot" data-operation="SquareRoot"
+            >Find Square Root</a
+          >
+          <!-- Add  Shapes to the Top nav -->
+          <a id="topNavItemShapes" data-operation="Shapes">Shapes</a>
+
+          <a id="topNavItemStopwatch" data-operation="Stopwatch">Stopwatch</a>
+        </div>
+
+        <!-- Dropdown list starts -->
+        <div class="operation-dropdown-container">
+          <i
+            class="fa-duotone fa-solid fa-gear toggle"
+            onclick="toggleDropdown()"
+          ></i>
+          <div
+            id="operation-dropdown-content"
+            class="operation-dropdown-content"
+          >
+            <div
+              id="ddlMenuItemPrimeNumber"
+              data-operation="PrimeNumber"
+              class="flex-row row-v-align-center row-h-align-center dropdown-content-item"
+            >
+              <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+              <a href="#">Find Prime Number</a>
+            </div>
+            <div
+              id="ddlMenuItemFactorial"
+              class="flex-row row-v-align-center row-h-align-center dropdown-content-item"
+              data-operation="Factorial"
+            >
+              <i class="fa-solid fa-calculator"></i>
+              <a href="#">Calculate Factorial</a>
+            </div>
+            <div
+              id="ddlMenuItemSquareRoot"
+              class="flex-row row-v-align-center row-h-align-center dropdown-content-item"
+              data-operation="SquareRoot"
+            >
+              <i class="fa-solid fa-square-root-variable"></i>
+              <a href="#">Find Square Root</a>
+            </div>
+            <!-- Add Shapes to the Dropdown Menu  -->
+            <div
+              id="ddlMenuItemShapes"
+              class="flex-row row-v-align-center row-h-align-center dropdown-content-item"
+              data-operation="Shapes"
+            >
+              <i class="fa-solid fa-shapes"></i>
+              <a href="#">Shapes</a>
+            </div>
+
+            <div
+              id="ddlMenuItemStopwatch"
+              class="flex-row row-v-align-center row-h-align-center dropdown-content-item"
+              data-operation="Stopwatch"
+            >
+              <i class="fa-solid fa-stopwatch"></i>
+              <a href="#">Stopwatch</a>
+            </div>
+          </div>
+        </div>
+        <!-- Dropdown list ends -->
+      </div>
+      <!-- Top navigation ends -->
+
+      <!-- Operation body starts -->
+      <div class="operation-container">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- Operation body ends -->
+    </div>
+    <!-- Body ends -->
+  </div>
+  <!-- Main container ends -->
+
+  <!-- Dialog Box HTML -->
+  <div id="dialog-container" class="dialog-container hidden" tabindex="1">
+    <div class="dialog-content">
+      <h2 id="dialog-title">Result</h2>
+      <p id="dialog-message">This is where the result will be shown.</p>
+      <button id="close-dialog-button">Close</button>
+    </div>
+  </div>
+</body>

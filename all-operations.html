@@ -1,0 +1,164 @@
+<div class="operation-item no-operation">
+    Please select the operation to perform
+</div>
+
+<!-- Prime number Operation Start -->
+<div class="operation-item find-prime-number-operation hidden" id="PrimeNumberOperation">
+    <div class="operation-item-container flex-column">
+        <div class="flex-row">
+            <span class="margin-right-10px">Enter Number :</span>
+            <input type="text" class="textbox" id="prime-number-input" placeholder="Enter Valid Number :" />
+        </div>
+        <div class="margin-top-10px">
+            <button disabled id="prime-number-btn" class="float operation-button" onclick="checkPrimeNumber()">
+                Find
+            </button>
+        </div>
+        <div>
+            <p id="prime-number-result"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Factorial Operation Start -->
+<div id="FactorialOperation" class="operation-item calculate-factorial-operation hidden">
+    <div class="operation-item-container flex-column">
+        <div class="flex-row">
+            <span class="margin-right-10px">Enter Number :</span>
+            <input class="textbox" type="text" id="factorial-input" placeholder="Enter Valid Number :" />
+        </div>
+        <div class="margin-top-10px">
+            <button disabled id="factorial-btn" class="float operation-button" onclick="calculateFactorial()">
+                Calculate
+            </button>
+        </div>
+        <div>
+            <p id="factorial-result"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Square Root Operation Start -->
+<div id="SquareRootOperation" class="operation-item find-square-root-operation hidden">
+    <div class="operation-item-container flex-column">
+        <div class="flex-row">
+            <span class="margin-right-10px">Enter Number :</span>
+            <input class="textbox" type="text" id="sqrt-input" placeholder="Enter Valid Number :" />
+        </div>
+        <div class="margin-top-10px">
+            <button disabled id="sqrt-btn" class="float operation-button" onclick="findSquareRoot()">
+                Find
+            </button>
+        </div>
+        <div>
+            <p id="sqrt-result"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Shapes operation  Start-->
+<div id="ShapesOperation" class="operation-item shapes-operation hidden">
+    <div class="operation-item-container">
+        <!-- Add input fields, buttons, and functionality as needed -->
+
+        <!-- Tab container with three tabs -->
+        <div class="tab-container">
+            <div class="tab" data-tab="tab1">Square</div>
+            <div class="tab" data-tab="tab2">Rectangle</div>
+            <div class="tab" data-tab="tab3">Circle</div>
+        </div>
+
+        <!-- Tab content for Square -->
+        <div id="tab1" class="tab-content">
+            <div class="flex-row row-h-align-center">
+                <span class="margin-right-10px side-lenght-label">Enter Side Length:</span>
+                <input type="text" class="textbox" id="square-side-input" placeholder="Enter Side Length" />
+            </div>
+            <div class="margin-top-10px">
+                <!-- Separate buttons for Area and Perimeter -->
+                <button disabled id="square-area-btn" class="operation-button" onclick="SquareArea()">
+                    Calculate Area
+                </button>
+
+                <button disabled id="square-perimeter-btn" class="operation-button" onclick="SquarePerimeter()">
+                    Find Perimeter
+                </button>
+            </div>
+            <div>
+                <p id="square-area-result" class="result-text"></p>
+                <p id="square-perimeter-result" class="result-text"></p>
+            </div>
+        </div>
+
+        <!-- Tab content for Rectangle -->
+        <div id="tab2" class="tab-content">
+            <div class="flex-row row-h-align-center">
+                <span class="margin-right-10px side-lenght-label">Enter Length:</span>
+                <input type="text" class="textbox" id="rectangle-length-input" placeholder="Enter Length" />
+            </div>
+            <div class="flex-row margin-top-10px">
+                <span class="margin-right-10px side-lenght-label">Enter Width:</span>
+                <input type="text" class="textbox" id="rectangle-width-input" placeholder="Enter Width" />
+            </div>
+            <div class="margin-top-10px">
+                <!-- Separate buttons for Area and Perimeter -->
+                <button disabled id="rectangle-area-btn" class="operation-button" onclick="RectangleArea()">
+                    Calculate Area
+                </button>
+
+                <button disabled id="rectangle-perimeter-btn" class="operation-button" onclick="RectanglePerimeter()">
+                    Find Perimeter
+                </button>
+            </div>
+            <div>
+                <p id="rectangle-area-result" class="result-text"></p>
+                <p id="rectangle-perimeter-result" class="result-text"></p>
+            </div>
+        </div>
+
+        <!-- Tab content for Circle -->
+
+        <div id="tab3" class="tab-content">
+            <div class="flex-row row-h-align-center">
+                <span class="margin-right-10px side-lenght-label">Enter Radius:</span>
+                <input type="text" class="textbox" id="circle-radius-input" placeholder="Enter Radius" />
+            </div>
+            <div class="margin-top-10px">
+                <!-- Separate buttons for Area and Circumference -->
+                <button disabled id="circle-area-btn" class="operation-button" onclick="calculateCircleArea()">
+                    Calculate Area
+                </button>
+
+                <button disabled id="circle-circumference-btn" class="operation-button"
+                    onclick="calculateCircleCircumference()">
+                    Find Circumference
+                </button>
+            </div>
+            <div>
+                <p id="circle-area-result" class="result-text"></p>
+                <p id="circle-circumference-result" class="result-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Stopwatch Operation -->
+<div id="StopwatchOperation" class="operation-item stopwatch-operation hidden">
+    <div class="operation-item-container flex-column">
+        <!-- Label to display the count -->
+        <label id="lbl-time">00:00:00</label>
+
+        <!-- Buttons to start and stop the timer -->
+        <div class="flex-row margin-bottom-5px">
+            <button id="btn-start" class="operation-button">Start</button>
+            <button id="btn-stop">Stop</button>
+        </div>
+        <!-- Buttons to add time -->
+
+        <div class="flex-row">
+            <button id="btn-add-sec">Add 1 sec</button>
+            <button id="btn-add-min">Add 1 min</button>
+            <button id="btn-add-hr">Add 1 hr</button>
+        </div>
+    </div>
+</div>

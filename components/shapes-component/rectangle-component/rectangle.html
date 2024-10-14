@@ -1,0 +1,23 @@
+<!-- components/shapes-component/rectangle-component/rectangle.html -->
+<div id="tab2" class="tab-content">
+    <div class="flex-row row-h-align-center">
+        <span class="margin-right-10px side-lenght-label">Enter Length:</span>
+        <input type="text" class="textbox required" id="rectangle-length-input" placeholder="Enter Length" />
+    </div>
+    <div class="flex-row margin-top-10px">
+        <span class="margin-right-10px side-lenght-label">Enter Width:</span>
+        <input type="text" class="textbox required" id="rectangle-width-input" placeholder="Enter Width" />
+    </div>
+    <div class="margin-top-10px">
+        <button disabled id="rectangle-area-btn" class="operation-button" onclick="RectangleArea()">
+            Calculate Area
+        </button>
+        <button disabled id="rectangle-perimeter-btn" class="operation-button" onclick="RectanglePerimeter()">
+            Find Perimeter
+        </button>
+    </div>
+    <div>
+        <p id="rectangle-area-result" class="result-text"></p>
+        <p id="rectangle-perimeter-result" class="result-text"></p>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+label {
+  font-size: 4em; /* Make the label text larger */
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  background-color: #4caf50; /* Green background */
+  padding: 20px; /* Add padding around the text */
+  border-radius: 10px; /* Make the corners rounded */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  letter-spacing: 2px; /* Increase space between characters */
+  margin-bottom: 20px; /* Add some space below the label */
+  text-align: center;
+   
+}

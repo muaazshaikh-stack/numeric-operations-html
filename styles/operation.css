@@ -1,0 +1,50 @@
+.operation-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.operation-container .no-operation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.5em;
+  color: #0b3764;
+}
+
+.operation-container .find-prime-number-operation {
+  color: #0b3764;
+}
+
+.operation-container .calculate-factorial-operation {
+  color: #0b3764;
+}
+
+.operation-container .find-square-root-operation {
+  color: #0b3764;
+}
+
+.operation-item-container {
+  padding: 20px;
+}
+
+/* Styling for the textbox */
+.textbox {
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Inner padding for better readability */
+  font-size: 16px; /* Text size */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  outline: none; /* Remove default focus outline */
+  transition: border 0.3s ease; /* Smooth border transition on focus */
+}
+
+/* Change border color on focus */
+/* .textbox:not(.input-error):focus {
+    border-color: yellow; 
+} */

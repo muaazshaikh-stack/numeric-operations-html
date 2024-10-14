@@ -1,0 +1,107 @@
+.top-nav-container {
+  width: 100%;
+  background-color: #d7eafd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  @media (min-width: 769px) {
+    display: none;
+  } 
+}
+
+.burger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 10px;
+  background-color: #0b3764;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.burger-button i {
+  color: white;
+}
+
+.nav-hidden .body-container {
+  flex: 1 1 50%;
+}
+
+.top-nav-items-container {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-nav-items-container a {
+  color: #0b3764;
+  padding: 10px;
+  font-size: 20px;
+  margin-right: 20px;
+  transition: 0.3s ease;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  text-decoration: none;
+  text-shadow: 4px 3px 5px rgba(94, 95, 200, 0.73);
+}
+
+.top-nav-items-container a:hover {
+  text-decoration: underline;
+  font-size: 21px;
+  transition: 0.3s ease;
+}
+
+.top-nav-items-container a.selected {
+  text-decoration: underline !important;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-list-item-container {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #61a7ff, #cadbf2);
+  border: 1px solid #0b3764;
+}
+
+.nav-list-item {
+  width: 100%;
+}
+
+.nav-list-item-selection {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list-item-container i {
+  margin-right: 10px;
+}
+
+.nav-list-item-container:hover {
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.row-v-align-center {
+  align-items: center;
+}
+
+.row-h-align-center {
+  justify-content: center;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 15px solid #0b3764;
+  border-bottom: 10px solid transparent;
+}
