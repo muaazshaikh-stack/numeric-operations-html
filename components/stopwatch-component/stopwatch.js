@@ -4,7 +4,7 @@ let sec = 0,
 let timerId = null; // To store the timer ID for clearing later
 
 // Function to update the display in hour:min:sec format
-function updateDisplay() {
+function  updateStopwatchDisplay() {
   const timeLabel = document.getElementById("lbl-time"); // Get the label element
 
   // Format time components to always show two digits
@@ -29,7 +29,7 @@ function startWatch() {
     min = 0; // Reset minutes
   }
 
-  updateDisplay(); // Update the display after time changes
+  updateStopwatchDisplay(); // Update the display after time changes
 
   // Set up the timer to call this function again after 1 second
   timerId = setTimeout(startWatch, 1000);
@@ -60,7 +60,7 @@ function addSecond() {
     hr = 0;
   }
 
-  updateDisplay();
+  updateStopwatchDisplay();
 }
 
 function addMinute() {
@@ -78,7 +78,7 @@ function addMinute() {
     hr = 0;
   }
 
-  updateDisplay();
+  updateStopwatchDisplay();
 }
 
 function addHour() {
@@ -89,7 +89,7 @@ function addHour() {
     min = 0;
     hr = 0;
   }
-  updateDisplay();
+  updateStopwatchDisplay();
 }
 
 // Add event listeners to buttons
