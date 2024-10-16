@@ -63,9 +63,8 @@ function resetWatch() {
   sec = 0;
   min = 0;
   hr = 0;
+
   updateStopwatchDisplay(); // Update display after resetting time
-  stopWatch(); // Stop the timer if it's running
-  timerId = null; // Reset timerId so that it can start again
 }
 
 // Functions to add time
