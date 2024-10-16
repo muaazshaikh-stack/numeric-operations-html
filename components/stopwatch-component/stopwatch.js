@@ -1,10 +1,29 @@
-let sec = 0,
-  min = 0,
-  hr = 0; // Start all at 0
-let timerId = null; // To store the timer ID for clearing later
+if (window.sec === undefined) {
+  var sec = 0;
+} else {
+  sec = 0;
+}
+
+if (window.min === undefined) {
+  var min = 0;
+} else {
+  min = 0;
+}
+
+if (window.hr === undefined) {
+  var hr = 0;
+} else {
+  hr = 0;
+}
+
+if (window.timerId === undefined) {
+  var timerId = null;
+} else {
+  timerId = null;
+}
 
 // Function to update the display in hour:min:sec format
-function  updateStopwatchDisplay() {
+function updateStopwatchDisplay() {
   const timeLabel = document.getElementById("lbl-time"); // Get the label element
 
   // Format time components to always show two digits
@@ -37,6 +56,16 @@ function startWatch() {
 
 function stopWatch() {
   clearTimeout(timerId); // Stop the timer
+}
+
+// Function to reset the stopwatch
+function resetWatch() {
+  sec = 0;
+  min = 0;
+  hr = 0;
+  updateStopwatchDisplay(); // Update display after resetting time
+  stopWatch(); // Stop the timer if it's running
+  timerId = null; // Reset timerId so that it can start again
 }
 
 // Functions to add time
@@ -92,28 +121,32 @@ function addHour() {
   updateStopwatchDisplay();
 }
 
-// Add event listeners to buttons
+/**
+ * Add event listeners to buttons
+ */
+document.getElementById("btn-start").addEventListener("click", () => {
+  if (timerId === null) {
+    startWatch(); // Start the count-up process
+  }
+});
 
-  document.getElementById("btn-start").addEventListener("click", () => {
-    if (timerId === null) {
-      startWatch(); // Start the count-up process
-    }
-  });
+document.getElementById("btn-stop").addEventListener("click", () => {
+  stopWatch(); // Stop the count-up process
+  timerId = null; // Reset timerId so that it can start again
+});
 
-  document.getElementById("btn-stop").addEventListener("click", () => {
-    stopWatch(); // Stop the count-up process
-    timerId = null; // Reset timerId so that it can start again
-  });
+document.getElementById("btn-add-sec").addEventListener("click", () => {
+  addSecond(); // Add 1 second
+});
 
-  document.getElementById("btn-add-sec").addEventListener("click", () => {
-    addSecond(); // Add 1 second
-  });
+document.getElementById("btn-add-min").addEventListener("click", () => {
+  addMinute(); // Add 1 minute
+});
 
-  document.getElementById("btn-add-min").addEventListener("click", () => {
-    addMinute(); // Add 1 minute
-  });
+document.getElementById("btn-add-hr").addEventListener("click", () => {
+  addHour(); // Add 1 hour
+});
 
-  document.getElementById("btn-add-hr").addEventListener("click", () => {
-    addHour(); // Add 1 hour
-  });
-
+document.getElementById("btn-reset").addEventListener("click", () => {
+  resetWatch(); // Reset the stopwatch to 00:00:00
+});

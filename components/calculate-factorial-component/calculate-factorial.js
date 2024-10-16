@@ -12,22 +12,23 @@ document
     }
   });
 
-function validateFactorialInput(element) {
-  const isInteger = isRealNumber(element.value);
-
-  // Get the button
-  const button = element
-    .closest("div.operation-item")
-    .querySelector(".operation-button");
-
-  if (isInteger && button !== undefined && button !== null) {
-    // Remove enable the button
-    button.disabled = false;
-  } else {
-    // Add disable the button
-    button.disabled = true;
+  function validateFactorialInput(element) {
+    const isInteger = isRealNumber(element.value);
+  
+    // Get the button
+    const button = element
+      .closest("div.operation-item")
+      .querySelector(".operation-button");
+  
+    if (isInteger && button !== undefined && button !== null) {
+      // Enable the button if the input is a valid real number
+      button.disabled = false;
+    } else {
+      // Disable the button if the input is invalid
+      button.disabled = true;
+    }
   }
-}
+  
 
 function calculateFactorial() {
   try {

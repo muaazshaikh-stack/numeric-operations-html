@@ -44,7 +44,3 @@
   transition: border 0.3s ease; /* Smooth border transition on focus */
 }
 
-/* Change border color on focus */
-/* .textbox:not(.input-error):focus {
-    border-color: yellow; 
-} */
